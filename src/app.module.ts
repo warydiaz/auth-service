@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { envValidationSchema } from './infrastructure/config/env.validation';
-import { HealthController } from './infrastructure/http/health.controller';
+import { HealthController } from './infrastructure/http/routes/health.routes';
 
 @Module({
   imports: [
