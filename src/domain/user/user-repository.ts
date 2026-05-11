@@ -3,6 +3,7 @@ import { User } from './user';
 export interface UserRepository {
   save(input: User): Promise<User>;
   findById(id: string): Promise<User | null>;
+  findByEmail(email: string): Promise<User | null>;
   findAll(
     filters: UserFilters,
     page: number,

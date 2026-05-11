@@ -5,7 +5,7 @@ import { RegisterUseCase } from 'src/application/auth/register-user';
 @Controller()
 export class UserController {
   constructor(private readonly authService: RegisterUseCase) {}
-  @Post()
+  @Post('auth/register')
   async register(@Body() dto: RegisterUserDto) {
     return await this.authService.execute(dto);
   }
